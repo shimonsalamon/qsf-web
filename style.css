@@ -7,7 +7,8 @@
 
 body {
   /* font-family: 'Roboto', Arial, sans-serif; */
-  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  /* font-family: 'Open Sans', 'Helvetica Neue', sans-serif; */
+  font-family: Manrope ExtraLight, sans-serif;
   background-color: #fefefe;
   line-height: 1.6;
   color: #333;
@@ -38,8 +39,8 @@ header .container {
 }
 
 .logo img {
-  width: 40px;
-  height: auto;
+  width: auto;
+  height: 48px;
   margin-right: 10px;
 }
 
@@ -54,7 +55,7 @@ header .container {
   list-style: none;
   display: flex;
   justify-content: center;
-  flex-grow: 1; 
+  flex-grow: 1;
 }
 
 .menu li {
@@ -67,7 +68,7 @@ header .container {
   color: #35663d;
   text-decoration: none;
   transition: color 0.3s ease;
-  text-transform: uppercase;
+  font-weight: 600;
 }
 
 .menu a:hover {
@@ -126,6 +127,7 @@ header .container {
   align-items: center;
   justify-content: center;
   text-align: center;
+
 }
 
 .hero h1 {
@@ -133,28 +135,71 @@ header .container {
   font-size: 40px;
   font-weight: 700;
   margin-bottom: 20px;
+  text-shadow: 2px 2px 4px #fefefe;
 }
 
 .hero p {
   color: #fefefe;
   font-size: 20px;
-  font-weight: 300;
+  font-weight: 300;  
+  text-shadow: 2px 2px 4px #000000;
 }
 
 /* About section */
 .about-section {
-  padding: 50px 0;
-  text-align: center;
+  padding: 50px;
+  /* text-align: center; */
+  background-color: #d23e29;
+  color: #fefefe;
+}
+
+.about-section .container {
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-columns: 1fr;
+  /* align-items: center; */
+  display: grid;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* .image-wrapper {
+  flex: 1;
+  margin-right: 20px;
+  height: 400px;
+  width: 400px;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+} */
+
+.about-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 2px solid #fefefe;
+  border-radius: 16px;
+  transform: rotate(-1deg);
+}
+
+.text-container {
+  flex: 1;
+  margin-left: 20px;
+  transform: rotate(-1deg);
 }
 
 .about-section h2 {
-  font-size: 32px;
-  color: #d23e29;
+  font-size: 48px;
+  font-weight: 500;
+  /* color: #d23e29; */
   margin-bottom: 20px;
 }
 
 .about-section p {
   font-size: 18px;
+  font-weight: 300;
   margin-bottom: 20px;
 }
 
@@ -221,7 +266,7 @@ header .container {
   font-weight: bold;
   opacity: 0;
   transition: opacity 0.3s ease, transform 0.3s ease;
-  border-radius:  0 0 16px 16px;
+  border-radius: 0 0 16px 16px;
 }
 
 .services-list li .description h3 {
@@ -242,6 +287,10 @@ header .container {
 @media screen and (max-width: 1024px) {
   .services-list li {
     width: calc(50% - 20px);
+  }
+  
+  .about-section .container {
+    grid-template-columns: 1fr;
   }
 }
 
