@@ -15,9 +15,18 @@ body {
   color: #333;
 }
 
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  z-index: -1;
+}
+
 /* Header */
 header {
-  background-color: #fefefe;
+  background-color: #fefefee3;
   padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: sticky;
@@ -120,16 +129,42 @@ header .container {
 
 /* Hero section */
 .hero {
-  background-image: url("assets/hero2.jpg");
+  /* background-image: url("assets/hero2.jpg"); */
   background-size: cover;
   background-position: center;
-  height: 500px;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 
 }
+
+.hero {
+  position: relative;
+}
+
+.svg-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 100px;
+  border-radius: 50%;
+  /* background-color: #f7e5ea; */
+  padding: 20px;
+  width: fit-content;
+  height: fit-content;
+  z-index: -1;
+}
+
+.hero svg {
+  width: 50vh;
+  height: auto;
+  opacity: 0.5;
+
+}
+
 
 .hero h1 {
   color: #d23e29;
@@ -446,7 +481,7 @@ header .container {
   height: 150px;
 }
 
-.contact-form button {  
+.contact-form button {
   background-color: #35663d;
   font-weight: 600;
   font-size: 16px;
@@ -455,15 +490,15 @@ header .container {
   border: none;
   cursor: pointer;
   border-radius: 50px;
-  position: absolute; 
-  bottom: -21px; 
+  position: absolute;
+  bottom: -21px;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
 }
 
 @media screen and (max-width: 550px) {
-  .contact-section .container{
+  .contact-section .container {
     padding: 36px 25px;
   }
 }
